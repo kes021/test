@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          .gridContainer {
+              display: grid;
+              border: 2px solid black;
+              grid-template-columns: 150px 150px 150px;
+              grid-template-rows: 150px 150px 150px;
+              grid-column-gap: 2px;
+              grid-row-gap: 2px;
+              background-color: rgb(255,229,204);
+              padding: 1px;
+              float: left; margin-right:50px;
+          }
+          .gridItem {
+              border: 2px solid black;
+              padding: 30px;
+              font-size: 20px;
+              background-color: white;
+          }
+          .gridItem:hover {
+              background-color: yellow;
+          }
+          .gridItem1 {
+              background-color: green;
+          }
+          .gridItem2 {
+              background-color: blue;
+          }
+          #gridTurn {
+              display: grid;
+              grid-template-columns: 150px 150px 150px;
+              grid-template-rows: 150px 150px 150px;
+              background-color: rgb(255,255,204);
+          }
+          .indicator1 {
+              border: 2px solid black;
+              padding: 30px;
+              font-size: 20px;
+              background-color: green;
+          }
+          .indicator2 {
+              border: 2px solid black;
+              padding: 30px;
+              font-size: 20px;
+              background-color: blue;
+          }
+          body { background-color: rgb(255,255,204); }
+
+        </style>
+    </head>
+
+    <body id='body'>
+
+        <h1>TicTacToe</h1>
+
+        <p><br></p>
+
+        <p><br></p>
+
+        <div class="gridContainer" id='gridContainer'>
+            <div class="gridItem" id='00'></div>
+            <div class="gridItem" id='01'></div>
+            <div class="gridItem" id='02'></div>
+            <div class="gridItem" id='10'></div>
+            <div class="gridItem" id='11'></div>
+            <div class="gridItem" id='12'></div>
+            <div class="gridItem" id='20'></div>
+            <div class="gridItem" id='21'></div>
+            <div class="gridItem" id='22'></div>
+        </div>
+
+
+        <div id='gridTurn'>
+            <p>Turn Indicator:</p>
+            <div class='indicator1'></div>
+        </div>
+
+        <p id='winner'></p>
+
+        <script>
+            window.addEventListener ('load', function () {
+                var winner = document.getElementById('winner');
+                var turnIndicator1 = document.getElementsByClassName('.indicator1');
+                var ctGame = true;
+                var index;
+                var winPlayer0 = false; // Player0 is green
+                var winPlayer1 = false; // Player1 is blue
+                var round = 0;
+
+                function setIndex() {
+                    index = [
+                        [0,0,0],
+                        [0,0,0],
+                        [0,0,0]
+                    ];
+                }
+
+                function endGameFct () {
+                    turnIndicator.style.backgroundColor = 'black';
+                    resetButton = document.createElement('button');
+                    resetButton.textContent = 'Start new game';
+                    document.body.appendChild(resetButton);
+                    resetButton.addEventListener ('click', reloadGame);
+                }
+
+                function reloadGame () {
+                    document.querySelectorAll('#gridContainer div').forEach(function(e) {
+                        e.style.backgroundColor = 'white';
+                    });
+                    round = 0;
+                    turnIndicator.style.backgroundColor = 'green';
+                    winner.textContent = '';
+                    setIndex();
+                    ctGame = true;
+                    resetButton.parentNode.removeChild(resetButton);
+                }
+
+                setIndex();
+                //setWhite();
+
+                document.querySelectorAll('.gridContainer div').forEach( function(e) {
+                    e.addEventListener('click', function () {
+                      if (e.className.indexOf('gridItem1') == -1) {
+                        e.className = "class='gridItem' class='gridItem1'";
+                        turnIndicator1.className = "class='indicator2'";
+                        round++;
+                        order0 = e.id.slice(0,1);
+                        order1 = e.id.slice(1,2);
+                        index[order0][order1] = 1;
+                        //printIndex();
+                        if (checkWin(1)) {
+                            winner.textContent = 'Green wins!';
+                            ctGame = false;
+                            endGameFct();
+                        }
+                      } else if (e.className.indexOf('gridItem2') == -1) {
+                        e.className = "class='gridItem' class='gridItem2'";
+                        turnIndicator.className = "class='indicator1'";
+                        round++;
+                        order0 = e.id.slice(0,1);
+                        order1 = e.id.slice(1,2);
+                        index[order0][order1] = 2;
+                        //printIndex();
+                        if (checkWin(2)) {
+                            winner.textContent = 'Blue wins!';
+                            ctGame == false;
+                            endGameFct();
+                        }
+                      }
+                    });
+                });
+/*                document.querySelectorAll('.gridContainer div').forEach( function(e) {
+                    e.addEventListener("mouseover", function () {
+                        if ((e.style.backgroundColor == 'white' || e.style.backgroundColor == '') && ctGame) {
+                            e.style.backgroundColor = 'yellow';
+                        }
+                    });
+                    e.addEventListener("mouseout", function () {
+                        if (e.style.backgroundColor == 'yellow' && ctGame) {
+                            e.style.backgroundColor = 'white';
+                        }
+                    });
+                }); */
+
+
+                function checkWin (player) {
+                    // test on rows
+                    if (index[0][0] === player && index[0][1] === player && index[0][2] === player)
+                        return true;
+                    if (index[1][0] === player && index[1][1] === player && index[1][2] === player)
+                        return true;
+                    if (index[2][0] === player && index[2][1] === player && index[2][2] === player)
+                        return true;
+                    // test on columns
+                    if (index[0][0] === player && index[1][0] === player && index[2][0] === player)
+                        return true;
+                    if (index[0][1] === player && index[1][1] === player && index[2][1] === player)
+                        return true;
+                    if (index[0][2] === player && index[1][2] === player && index[2][2] === player)
+                        return true;
+                    // test on diagonals
+                    if (index[0][0] === player && index[1][1] === player && index[2][2] === player)
+                        return true;
+                    if (index[0][2] === player && index[1][1] === player && index[2][0] === player)
+                        return true;
+                    // test if game is over (without winner)
+                    if (round === 9) {
+                        winner.textContent = 'No Winner!';
+                        endGameFct();
+                    } else // otherwise return false
+                        return false;
+                }
+            });
+        </script>
+
+    </body>
+</html>
+
+
+
+

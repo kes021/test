@@ -1,0 +1,224 @@
+key schedule:
+w[ 0] =	2b7e1516
+w[ 1] =	28aed2a6
+w[ 2] =	abf71588
+w[ 3] =	09cf4f3c
+w[ 4] =	a0fafe17
+w[ 5] =	88542cb1
+w[ 6] =	23a33939
+w[ 7] =	2a6c7605
+w[ 8] =	f2c295f2
+w[ 9] =	7a96b943
+w[10] =	5935807a
+w[11] =	7359f67f
+w[12] =	3d80477d
+w[13] =	4716fe3e
+w[14] =	1e237e44
+w[15] =	6d7a883b
+w[16] =	ef44a541
+w[17] =	a8525b7f
+w[18] =	b671253b
+w[19] =	db0bad00
+w[20] =	d4d1c6f8
+w[21] =	7c839d87
+w[22] =	caf2b8bc
+w[23] =	11f915bc
+w[24] =	6d88a37a
+w[25] =	110b3efd
+w[26] =	dbf98641
+w[27] =	ca0093fd
+w[28] =	4e54f70e
+w[29] =	5f5fc9f3
+w[30] =	84a64fb2
+w[31] =	4ea6dc4f
+w[32] =	ead27321
+w[33] =	b58dbad2
+w[34] =	312bf560
+w[35] =	7f8d292f
+w[36] =	ac7766f3
+w[37] =	19fadc21
+w[38] =	28d12941
+w[39] =	575c006e
+w[40] =	d014f9a8
+w[41] =	c9ee2589
+w[42] =	e13f0cc8
+w[43] =	b6630ca6
+
+round[ 0].input:	00112233445566778899aabbccddeeff
+round[ 0].k_sch:	000102030405060708090a0b0c0d0e0f
+round[ 1].start:	00102030405060708090a0b0c0d0e0f0
+round[ 1].s_box:	63cab7040953d051cd60e0e7ba70e18c
+round[ 1].s_row:	6353e08c0960e104cd70b751bacad0e7
+round[ 1].m_col:	5f72641557f5bc92f7be3b291db9f91a
+round[ 1].k_sch:	d6aa74fdd2af72fadaa678f1d6ab76fe
+round[ 2].start:	89d810e8855ace682d1843d8cb128fe4
+round[ 2].s_box:	a761ca9b97be8b45d8ad1a611fc97369
+round[ 2].s_row:	a7be1a6997ad739bd8c9ca451f618b61
+round[ 2].m_col:	ff87968431d86a51645151fa773ad009
+round[ 2].k_sch:	b692cf0b643dbdf1be9bc5006830b3fe
+round[ 3].start:	4915598f55e5d7a0daca94fa1f0a63f7
+round[ 3].s_box:	3b59cb73fcd90ee05774222dc067fb68
+round[ 3].s_row:	3bd92268fc74fb735767cbe0c0590e2d
+round[ 3].m_col:	4c9c1e66f771f0762c3f868e534df256
+round[ 3].k_sch:	b6ff744ed2c2c9bf6c590cbf0469bf41
+round[ 4].start:	fa636a2825b339c940668a3157244d17
+round[ 4].s_box:	2dfb02343f6d12dd09337ec75b36e3f0
+round[ 4].s_row:	2d6d7ef03f33e334093602dd5bfb12c7
+round[ 4].m_col:	6385b79ffc538df997be478e7547d691
+round[ 4].k_sch:	47f7f7bc95353e03f96c32bcfd058dfd
+round[ 5].start:	247240236966b3fa6ed2753288425b6c
+round[ 5].s_box:	36400926f9336d2d9fb59d23c42c3950
+round[ 5].s_row:	36339d50f9b539269f2c092dc4406d23
+round[ 5].m_col:	f4bcd45432e554d075f1d6c51dd03b3c
+round[ 5].k_sch:	3caaa3e8a99f9deb50f3af57adf622aa
+round[ 6].start:	c81677bc9b7ac93b25027992b0261996
+round[ 6].s_box:	e847f56514dadde23f77b64fe7f7d490
+round[ 6].s_row:	e8dab6901477d4653ff7f5e2e747dd4f
+round[ 6].m_col:	9816ee7400f87f556b2c049c8e5ad036
+round[ 6].k_sch:	5e390f7df7a69296a7553dc10aa31f6b
+round[ 7].start:	c62fe109f75eedc3cc79395d84f9cf5d
+round[ 7].s_box:	b415f8016858552e4bb6124c5f998a4c
+round[ 7].s_row:	b458124c68b68a014b99f82e5f15554c
+round[ 7].m_col:	c57e1c159a9bd286f05f4be098c63439
+round[ 7].k_sch:	14f9701ae35fe28c440adf4d4ea9c026
+round[ 8].start:	d1876c0f79c4300ab45594add66ff41f
+round[ 8].s_box:	3e175076b61c04678dfc2295f6a8bfc0
+round[ 8].s_row:	3e1c22c0b6fcbf768da85067f6170495
+round[ 8].m_col:	baa03de7a1f9b56ed5512cba5f414d23
+round[ 8].k_sch:	47438735a41c65b9e016baf4aebf7ad2
+round[ 9].start:	fde3bad205e5d0d73547964ef1fe37f1
+round[ 9].s_box:	5411f4b56bd9700e96a0902fa1bb9aa1
+round[ 9].s_row:	54d990a16ba09ab596bbf40ea111702f
+round[ 9].m_col:	e9f74eec023020f61bf2ccf2353c21c7
+round[ 9].k_sch:	549932d1f08557681093ed9cbe2c974e
+round[10].start:	bd6e7c3df2b5779e0b61216e8b10b689
+round[10].s_box:	7a9f102789d5f50b2beffd9f3dca4ea7
+round[10].s_row:	7ad5fda789ef4e272bca100b3d9ff59f
+round[10].k_sch:	13111d7fe3944a17f307a78b4d2b30c5
+round[10].output:	69c4e0d86a7b0430d8cdb78070b4c55a
+
+round[ 0].iinput:	69c4e0d86a7b0430d8cdb78070b4c55a
+round[ 0].ik_sch:	13111d7fe3944a17f307a78b4d2b30c5
+round[ 1].istart:	7ad5fda789ef4e272bca100b3d9ff59f
+round[ 1].is_box:	7a9f102789d5f50b2beffd9f3dca4ea7
+round[ 1].is_box:	bd6e7c3df2b5779e0b61216e8b10b689
+round[ 1].ik_sch:	549932d1f08557681093ed9cbe2c974e
+round[ 1].ik_add:	e9f74eec023020f61bf2ccf2353c21c7
+round[ 2].istart:	54d990a16ba09ab596bbf40ea111702f
+round[ 2].is_box:	5411f4b56bd9700e96a0902fa1bb9aa1
+round[ 2].is_box:	fde3bad205e5d0d73547964ef1fe37f1
+round[ 2].ik_sch:	47438735a41c65b9e016baf4aebf7ad2
+round[ 2].ik_add:	baa03de7a1f9b56ed5512cba5f414d23
+round[ 3].istart:	3e1c22c0b6fcbf768da85067f6170495
+round[ 3].is_box:	3e175076b61c04678dfc2295f6a8bfc0
+round[ 3].is_box:	d1876c0f79c4300ab45594add66ff41f
+round[ 3].ik_sch:	14f9701ae35fe28c440adf4d4ea9c026
+round[ 3].ik_add:	c57e1c159a9bd286f05f4be098c63439
+round[ 4].istart:	b458124c68b68a014b99f82e5f15554c
+round[ 4].is_box:	b415f8016858552e4bb6124c5f998a4c
+round[ 4].is_box:	c62fe109f75eedc3cc79395d84f9cf5d
+round[ 4].ik_sch:	5e390f7df7a69296a7553dc10aa31f6b
+round[ 4].ik_add:	9816ee7400f87f556b2c049c8e5ad036
+round[ 5].istart:	e8dab6901477d4653ff7f5e2e747dd4f
+round[ 5].is_box:	e847f56514dadde23f77b64fe7f7d490
+round[ 5].is_box:	c81677bc9b7ac93b25027992b0261996
+round[ 5].ik_sch:	3caaa3e8a99f9deb50f3af57adf622aa
+round[ 5].ik_add:	f4bcd45432e554d075f1d6c51dd03b3c
+round[ 6].istart:	36339d50f9b539269f2c092dc4406d23
+round[ 6].is_box:	36400926f9336d2d9fb59d23c42c3950
+round[ 6].is_box:	247240236966b3fa6ed2753288425b6c
+round[ 6].ik_sch:	47f7f7bc95353e03f96c32bcfd058dfd
+round[ 6].ik_add:	6385b79ffc538df997be478e7547d691
+round[ 7].istart:	2d6d7ef03f33e334093602dd5bfb12c7
+round[ 7].is_box:	2dfb02343f6d12dd09337ec75b36e3f0
+round[ 7].is_box:	fa636a2825b339c940668a3157244d17
+round[ 7].ik_sch:	b6ff744ed2c2c9bf6c590cbf0469bf41
+round[ 7].ik_add:	4c9c1e66f771f0762c3f868e534df256
+round[ 8].istart:	3bd92268fc74fb735767cbe0c0590e2d
+round[ 8].is_box:	3b59cb73fcd90ee05774222dc067fb68
+round[ 8].is_box:	4915598f55e5d7a0daca94fa1f0a63f7
+round[ 8].ik_sch:	b692cf0b643dbdf1be9bc5006830b3fe
+round[ 8].ik_add:	ff87968431d86a51645151fa773ad009
+round[ 9].istart:	a7be1a6997ad739bd8c9ca451f618b61
+round[ 9].is_box:	a761ca9b97be8b45d8ad1a611fc97369
+round[ 9].is_box:	89d810e8855ace682d1843d8cb128fe4
+round[ 9].ik_sch:	d6aa74fdd2af72fadaa678f1d6ab76fe
+round[ 9].ik_add:	5f72641557f5bc92f7be3b291db9f91a
+round[10].istart:	6353e08c0960e104cd70b751bacad0e7
+round[10].is_box:	63cab7040953d051cd60e0e7ba70e18c
+round[10].is_box:	00102030405060708090a0b0c0d0e0f0
+round[10].ik_sch:	000102030405060708090a0b0c0d0e0f
+round[10].ioutput:	00112233445566778899aabbccddeeff
+
+00112233445566778899aabbccddeeff
+69c4e0d86a7b0430d8cdb78070b4c55a
+MixColumns test
+6353e08c0960e104cd70b751bacad0e7
+
+6353e08c0960e104cd70b751bacad0e7
+tbox_mix_columns (8ce05363)
+Note that words are in the wrong order.
+tbox[63] = a56363c6
+t1 = a56363c6
+tbox[53] = f55353a6
+t2 = 5353a6f5
+tbox[e0] = 3be0e0db
+t3 = e0db3be0
+tbox[8c] = 8f8c8c03
+t4 = 038f8c8c
+a56363c6
+f630c533
+16ebfed3
+1564725f
+
+5f7264150960e104cd70b751bacad0e7
+tbox_mix_columns (04e16009)
+Note that words are in the wrong order.
+tbox[09] = 1b090912
+t1 = 1b090912
+tbox[60] = a06060c0
+t2 = 6060c0a0
+tbox[e1] = 38e1e1d9
+t3 = e1d938e1
+tbox[04] = 0c040408
+t4 = 080c0404
+1b090912
+7b69c9b2
+9ab0f153
+92bcf557
+
+5f72641557f5bc92cd70b751bacad0e7
+tbox_mix_columns (51b770cd)
+Note that words are in the wrong order.
+tbox[cd] = 4ccdcd81
+t1 = 4ccdcd81
+tbox[70] = 907070e0
+t2 = 7070e090
+tbox[b7] = c2b7b775
+t3 = b775c2b7
+tbox[51] = f35151a2
+t4 = a2f35151
+4ccdcd81
+3cbd2d11
+8bc8efa6
+293bbef7
+
+5f72641557f5bc92f7be3b29bacad0e7
+tbox_mix_columns (e7d0caba)
+Note that words are in the wrong order.
+tbox[ba] = d5baba6f
+t1 = d5baba6f
+tbox[ca] = 45caca8f
+t2 = caca8f45
+tbox[d0] = 6bd0d0bb
+t3 = d0bb6bd0
+tbox[e7] = 32e7e7d5
+t4 = d532e7e7
+d5baba6f
+1f70352a
+cfcb5efa
+1af9b91d
+
+5f72641557f5bc92f7be3b291db9f91a
+
+5f72641557f5bc92f7be3b291db9f91a

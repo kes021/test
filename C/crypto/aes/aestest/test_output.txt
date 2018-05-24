@@ -1,0 +1,154 @@
+key schedule:
+w[ 0] = 	2b7e1516
+w[ 1] = 	28aed2a6
+w[ 2] = 	abf71588
+w[ 3] = 	09cf4f3c
+w[ 4] = 	a0fafe17
+w[ 5] = 	88542cb1
+w[ 6] = 	23a33939
+w[ 7] = 	2a6c7605
+w[ 8] = 	f2c295f2
+w[ 9] = 	7a96b943
+w[10] = 	5935807a
+w[11] = 	7359f67f
+w[12] = 	3d80477d
+w[13] = 	4716fe3e
+w[14] = 	1e237e44
+w[15] = 	6d7a883b
+w[16] = 	ef44a541
+w[17] = 	a8525b7f
+w[18] = 	b671253b
+w[19] = 	db0bad00
+w[20] = 	d4d1c6f8
+w[21] = 	7c839d87
+w[22] = 	caf2b8bc
+w[23] = 	11f915bc
+w[24] = 	6d88a37a
+w[25] = 	110b3efd
+w[26] = 	dbf98641
+w[27] = 	ca0093fd
+w[28] = 	4e54f70e
+w[29] = 	5f5fc9f3
+w[30] = 	84a64fb2
+w[31] = 	4ea6dc4f
+w[32] = 	ead27321
+w[33] = 	b58dbad2
+w[34] = 	312bf560
+w[35] = 	7f8d292f
+w[36] = 	ac7766f3
+w[37] = 	19fadc21
+w[38] = 	28d12941
+w[39] = 	575c006e
+w[40] = 	d014f9a8
+w[41] = 	c9ee2589
+w[42] = 	e13f0cc8
+w[43] = 	b6630ca6
+
+round[ 0].input:	00112233445566778899aabbccddeeff
+round[ 0].k_sch:	000102030405060708090a0b0c0d0e0f
+round[ 1].start:	00102030405060708090a0b0c0d0e0f0
+round[ 1].s_box:	63cab7040953d051cd60e0e7ba70e18c
+round[ 1].s_row:	6353e08c0960e104cd70b751bacad0e7
+round[ 1].m_col:	66eef84fba034a76898c099a8dfcbc30
+round[ 1].k_sch:	d6aa74fdd2af72fadaa678f1d6ab76fe
+round[ 2].start:	b0448cb268ac388c532a716b5b57cace
+round[ 2].s_box:	e71b643745910764ede5a37f395b748b
+round[ 2].s_row:	e791a38b45e57437ed5b6464391b077f
+round[ 2].m_col:	7fb3b5c08885ab001281c008aabf6b1d
+round[ 2].k_sch:	b692cf0b643dbdf1be9bc5006830b3fe
+round[ 3].start:	c9217acbecb816f1ac1a0508c28fd8e3
+round[ 3].s_box:	ddfdda1fce6c47a191a26b3025736111
+round[ 3].s_row:	dd6c6b11cea2611f9173daa125fd4730
+round[ 3].m_col:	318b76da7c1cbe0211cddb0f94e7dc25
+round[ 3].k_sch:	b6ff744ed2c2c9bf6c590cbf0469bf41
+round[ 4].start:	87740294aede77bd7d94d7b0908e6364
+round[ 4].s_box:	17927722e41df57aff220ee76019fb43
+round[ 4].s_row:	171d0e43e422fb22ff19777a6092f5e7
+round[ 4].m_col:	95943b6a408f5662d92e86654023ae4d
+round[ 4].k_sch:	47f7f7bc95353e03f96c32bcfd058dfd
+round[ 5].start:	d263ccd6d5ba68612042b4d9bd2623b0
+round[ 5].s_box:	b5fb4bf603f445efb72c8d357af726e7
+round[ 5].s_row:	b5f48de7032c26f6b7f74bef7afb4535
+round[ 5].m_col:	926738535b3b9e025938b48699e8d12b
+round[ 5].k_sch:	3caaa3e8a99f9deb50f3af57adf622aa
+round[ 6].start:	aecd9bbbf2a403e909cb1bd1341ef381
+round[ 6].s_box:	e4bd14ea89497b1e011faf3e18720d0c
+round[ 6].s_row:	e449af0c891f0dea0172141e18bd7b3e
+round[ 6].m_col:	878be701393cdf22633987a5662df645
+round[ 6].k_sch:	5e390f7df7a69296a7553dc10aa31f6b
+round[ 7].start:	d9b2e87cce9a4db4c46cba646c8ee92e
+round[ 7].s_box:	35379b108bb8e38d1c50f44350191e31
+round[ 7].s_row:	35b8f4318b501e101c199b8d5037e343
+round[ 7].m_col:	e9a2e7d1016da391c2f6477c06ecd0ad
+round[ 7].k_sch:	14f9701ae35fe28c440adf4d4ea9c026
+round[ 8].start:	fd5b97cbe232411d86fc98314845108b
+round[ 8].s_box:	5439881f982383a444b046c7526eca3d
+round[ 8].s_row:	5423463d98b0ca1f446e88a4523983c7
+round[ 8].m_col:	e14e17e0e1dee1bb61046d4af0d489d0
+round[ 8].k_sch:	47438735a41c65b9e016baf4aebf7ad2
+round[ 9].start:	a60d90d545c284028112d7be5e6bf302
+round[ 9].s_box:	24d760036e255f770cc90eae587f0d77
+round[ 9].s_row:	24250e776ec90d030c7f607758d75fae
+round[ 9].m_col:	e9d05f3ab162293d69d6d90e6c057f30
+round[ 9].k_sch:	549932d1f08557681093ed9cbe2c974e
+round[10].start:	bd496deb41e77e5579453492d229e87e
+round[10].s_box:	7a3b3ce98394f3fcb66e184fb5a59bf3
+round[10].s_row:	7a9418f3836e9be9b6a53cfcb53bf34f
+round[10].k_sch:	13111d7fe3944a17f307a78b4d2b30c5
+round[10].output:	6985058c60fad1fe45a29b77f810c38a
+
+round[ 0].iinput:	6985058c60fad1fe45a29b77f810c38a
+round[ 0].ik_sch:	13111d7fe3944a17f307a78b4d2b30c5
+round[ 1].istart:	7a9418f3836e9be9b6a53cfcb53bf34f
+round[ 1].is_box:	7a3b3ce98394f3fcb66e184fb5a59bf3
+round[ 1].is_box:	bd496deb41e77e5579453492d229e87e
+round[ 1].ik_sch:	549932d1f08557681093ed9cbe2c974e
+round[ 1].ik_add:	e9d05f3ab162293d69d6d90e6c057f30
+round[ 2].istart:	49c5675e7487b1340873d3a93ef6d557
+round[ 2].is_box:	49f6d33474c5d5a9088767573e73b15e
+round[ 2].is_box:	a4d6a928ca07b5b7bfea0adad18f569d
+round[ 2].ik_sch:	47438735a41c65b9e016baf4aebf7ad2
+round[ 2].ik_add:	e3952e1d6e1bd00e5ffcb02e7f302c4f
+round[ 3].istart:	97f0ee2f138a520eb5a1c1b7d2ed5834
+round[ 3].is_box:	97edc10e13f058b7b58aee34d2a1522f
+round[ 3].is_box:	8553ddd782175e20d2cf99287ff1484e
+round[ 3].ik_sch:	14f9701ae35fe28c440adf4d4ea9c026
+round[ 3].ik_add:	91aaadcd6148bcac96c5466531588868
+round[ 4].istart:	f21cd0f407570b03fa066b7156d3b588
+round[ 4].is_box:	f2d36b03071cb571fa57d08856060bf4
+round[ 4].is_box:	04a905d538c4d22c14da6097b9a59eba
+round[ 4].ik_sch:	5e390f7df7a69296a7553dc10aa31f6b
+round[ 4].ik_add:	5a900aa8cf6240bab38f5d56b30681d1
+round[ 5].istart:	55193b4514a07f535d4e1384114d3c36
+round[ 5].is_box:	554d135314193c845da03b36114e7f45
+round[ 5].is_box:	ed6582509b8e6d4f8d474924e3b66b68
+round[ 5].ik_sch:	3caaa3e8a99f9deb50f3af57adf622aa
+round[ 5].ik_add:	d1cf21b83211f0a4ddb4e6734e4049c2
+round[ 6].istart:	2ee0a33b6b8e11b10becaf69895a4d55
+round[ 6].is_box:	2e5aafb16be04d690b8ea35589ec113b
+round[ 6].is_box:	c3461b5605a065e49ee671edf283e349
+round[ 6].ik_sch:	47f7f7bc95353e03f96c32bcfd058dfd
+round[ 6].ik_add:	84b1ecea90955be7678a43510f866eb4
+round[ 7].istart:	63fbfad5c344ca64d389bb79c1f0177a
+round[ 7].is_box:	63f0bb64c3fb1779d344fa7ac189cad5
+round[ 7].is_box:	0017fe8c336387afa98614bdddf210b5
+round[ 7].ik_sch:	b6ff744ed2c2c9bf6c590cbf0469bf41
+round[ 7].ik_add:	b6e88ac2e1a14e10c5df1802d99baff4
+round[ 8].istart:	fdac2cddc32f687b8d5b0417c231f6c5
+round[ 8].is_box:	fd31047bc3acf6178d2f2cc5c25b68dd
+round[ 8].is_box:	212e300333aad687b44e4207a857f7c9
+round[ 8].ik_sch:	b692cf0b643dbdf1be9bc5006830b3fe
+round[ 8].ik_add:	97bcff0857976b760ad58707c0674437
+round[ 9].istart:	68060124cb94af7aaf2082588e31e249
+round[ 9].is_box:	6831827acb06e258af9401498e20af24
+round[ 9].is_box:	f72e11bd59a53b5e1be709a4e6541ba6
+round[ 9].ik_sch:	d6aa74fdd2af72fadaa678f1d6ab76fe
+round[ 9].ik_add:	218465408b0a49a4c141715530ff6d58
+round[10].istart:	bd4181dc4a63d618c2ee79307555977d
+round[10].is_box:	bd5579184a419730c263817d75eed6dc
+round[10].is_box:	cdedaf345cf88508a80091133f994a93
+round[10].ik_sch:	000102030405060708090a0b0c0d0e0f
+round[10].ioutput:	cdecad3758fd830fa0099b183394449c
+
+cdecad3758fd830fa0099b183394449c
+6985058c60fad1fe45a29b77f810c38a

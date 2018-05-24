@@ -1,0 +1,7 @@
+Requires SDL2, OpenCL 1.1 and OpenGL 4.5
+
+Compile for Windows
+gcc main.c gl_core_4_5.c -lsdl2 -lopencl -lopengl32 -O2
+
+Compile for Linux (KDE)
+gcc main.c gl_core_4_5.c matrices.c vectors.c utils.c -lm -lSDL2 -lOpenCL -lGL -O2

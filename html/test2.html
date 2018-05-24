@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Number guessing game</title>
+        <style>
+            html {
+                font-family: sans-serif;
+            }
+            body {
+                width: 50%;
+                max-width: 800px;
+                min-width: 480px;
+                margin: 0 auto;
+            }
+            .lastResult {
+                color: white;
+                padding: 3px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p> <br> </p>
+        <button id="machine_start">Press to start machine!</button>
+        <p id="machine_status">The machine is stopped.</p>
+
+        <script>
+            window.addEventListener('load', function() {
+                var button = document.getElementById("machine_start");
+                var machine_status = document.getElementById('machine_status');
+                button.onclick = function() {
+                    if (machine_status.textContent === 'The machine is stopped.') {
+                        machine_status.textContent = 'The machine is running.';
+                        machine_start.textContent = 'Press to stop machine!';
+                    } else {
+                        machine_status.textContent = 'The machine is stopped.';
+                        machine_start.textContent = 'Press to start machine!';
+                    }
+
+                }
+                function new_object (name, age) {
+                    this.name = name;
+                    this.age = age;
+                    this.yearOfBirth = function() {
+                        return 2018 - this.age; //this is actually only correct, if birthday in this year has past already.. whatever
+                    }
+                    this.changeName = function() {
+                        this.name = prompt("Insert new name:");
+                    }
+                }
+            });
+        </script>
+    </body>
+
+</html>

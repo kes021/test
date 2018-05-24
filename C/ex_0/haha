@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+
+
+int main (int argc, char *argv[])
+{
+
+    char x = '0';
+
+    for (int i = 0; i < 100; ++i)
+    {
+        x = x + i;
+        printf("x = %c, \t %d\n", x, x);
+    }
+    return 0;
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AES visualisation</title>
+
+<style type="text/css">
+
+.cbox, .whead
+{
+    user-select: none;
+    font-family: monospace;
+    cursor: pointer;
+    border: 1px solid darkgrey;
+    text-align: center;
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.5);
+    margin: 2px;
+}
+
+.cbox {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.whead {
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.wbox:nth-child(odd) .cbox
+{
+    background-color: antiquewhite;
+}
+
+.wbox:nth-child(even) .cbox
+{
+    background-color: linen;
+}
+
+.wbox .cbox.selected
+{
+    background-color: orangered;
+}
+
+.wbox .cbox.affected
+{
+    background-color: darkgreen;
+    color: white;
+}
+
+.wbox .cbox:hover
+{
+    background-color: orange;
+}
+
+.wbox {
+    float: left;
+}
+
+#input, #output
+{
+    display: block;
+    margin: 40px;
+}
+
+#ctl
+{
+    width: 30%;
+}
+
+#ctl fieldset
+{
+    border: 1px solid lightgrey;
+}
+
+#showcase
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+</style>
+
+<script type="text/javascript">
+
+    window.addEventListener ('load', function () {
+
+        var inputBox    = document.getElementById ('input');
+        var outputBox   = document.getElementById ('output');
+
+        for (var w = 0; w < 4; w++)
+        {
+            var html = '<div class="wbox" id="iw' + w + '">';
+
+            for (var s = 0; s < 4; s++)
+            {
+                html    += '<div class="cbox" id="i' + s + w + '" data-s="' + s + '" data-w="' + w + '">';
+                html    += 'i<sub>' + s + ',' + w + '</sub>';
+                html    += '</div>';
+            }
+
+            inputBox.innerHTML += html + '</div>';
+        }
+
+        for (var w = 0; w < 4; w++)
+        {
+            var html = '<div class="wbox" id="ow' + w + '">';
+
+            for (var s = 0; s < 4; s++)
+            {
+                html    += '<div class="cbox" id="o' + s + w + '" data-s="' + s + '" data-w="' + w + '">';
+                html    += 'o<sub>' + s + ',' + w + '</sub>';
+                html    += '</div>';
+            }
+
+            outputBox.innerHTML += html + '</div>';
+        }
+
+        var selectedW, selectedS, selected = false;
+        var rounds = 0;
+
+        function aesShiftRows (s)
+        {
+            var newState = [
+                [s[0][0], s[0][1], s[0][2], s[0][3]],
+                [s[1][1], s[1][2], s[1][3], s[1][0]],
+                [s[2][2], s[2][3], s[2][0], s[2][1]],
+                [s[3][3], s[3][0], s[3][1], s[3][2]]
+            ];
+
+            return newState;
+        }
+
+        function aesMixColumnsAffect (state)
+        {
+            var newState = [
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0]
+            ];
+
+            // if in one word there is a 1, then all become one
+            for (var w = 0; w < 4; w++)
+            {
+                for (var s = 0; s < 4; s++)
+                {
+                    for (var t = 0; t < 4; t++)
+                    {
+                        newState [s][w] += state[t][w];
+                    }
+                }
+            }
+
+            return newState;
+        }
+
+        function displayState (state)
+        {
+            document.querySelectorAll ('#output .cbox').forEach (function (e) {
+                var s = e.getAttribute ('data-s'), w = e.getAttribute ('data-w');
+
+                e.classList.toggle ('affected', state[s][w] != 0);
+                e.textContent = state[s][w];
+            })
+        }
+
+        function updateOutputDisplay ()
+        {
+            var state = [
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0]
+            ];
+
+            if (!selected)
+                return ;
+
+            state[selectedS][selectedW] = 1;
+
+            for (var k = 0; k < rounds; k += 2)
+            {
+
+
+                state = aesShiftRows (state);
+
+                if (k + 1 < rounds)
+                    state = aesMixColumnsAffect (state);
+            }
+
+
+
+            displayState (state);
+        }
+
+        document.querySelectorAll ('#input .cbox').forEach (function (e) {
+            e.addEventListener ('click', function () {
+
+                document.querySelectorAll ('#input .cbox.selected').forEach (function (f) {
+                    f.classList.remove ('selected');
+                });
+
+                e.classList.add ('selected');
+                selected = true;
+                selectedS = e.getAttribute('data-s');
+                selectedW = e.getAttribute('data-w');
+
+                console.log ('selected (' + selectedS + ',' + selectedW + ')');
+
+                updateOutputDisplay ();
+            })
+        });
+
+        document.forms.encodeset.addEventListener ('input', function () {
+            document.getElementById('disproundnum').textContent =
+                document.forms.encodeset.roundnum.value + " Rounds";
+            rounds = parseInt (document.forms.encodeset.roundnum.value);
+            updateOutputDisplay ();
+        });
+    });
+
+</script>
+
+</head>
+
+<body>
+    <h1>AES visualisation</h1>
+
+    <p>
+        The following diagram shows how often each byte in the output is affected by the selected input byte after
+        a given number of rounds.
+    </p>
+
+    <div id="showcase">
+        <div id="input">
+
+        </div>
+
+        <div id="ctl">
+            <form name="encodeset">
+                <fieldset>
+                    <legend>Number of rounds</legend>
+                <input type="range" min="0" max="20" name="roundnum" value="0" style="width: 100%"><br>
+                <output for="roundnum" form="encodeset" id="disproundnum">
+                    0 Rounds
+                </output>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="output">
+
+        </div>
+        </div>
+
+</body>
+
+</html>
